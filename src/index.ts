@@ -1,14 +1,12 @@
-import AIClient from './aiClient';
+import aiClient from './aiClient';
+import aiAgent from './aiAgent';
+import runner from './runner';
 
-async function main() {
-  const client = new AIClient();
+const client = new aiClient();
 
-  try {
-    const response = await client.generateText("Escreva uma história para dormir de duas sentenças.");
-    console.log("Resposta da AI:", response);
-  } catch (error) {
-    console.error("Erro ao obter resposta:", error);
-  }
-}
+const agent = new aiAgent('Poet Assistant', 'You are a poet assistant.', client);
 
-main();
+(async () => {
+  const result = await runner.run(agent, 'Who are you? Write a poem about recursion in programming.');
+  console.log(result.final_output);
+})();
