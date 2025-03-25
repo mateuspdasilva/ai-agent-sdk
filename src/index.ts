@@ -25,10 +25,3 @@ export const createAgent = (name: string, instructions: string): Agent => {
 export const runAgent = async (agent: Agent, input: string): Promise<{ final_output: string }> => {
   return await Runner.run(agent, input);
 };
-
-// Exemplo de uso para facilitar a demonstração. Pode ser removido na versão final.
-(async () => {
-  const agent = createAgent('Poet Assistant', 'You are a poet assistant.');
-  const result = await runAgent(agent, 'Write a poem about recursion in programming.');
-  console.log(result.final_output);
-})();
