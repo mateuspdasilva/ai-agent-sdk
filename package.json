@@ -1,6 +1,6 @@
 {
   "name": "mateus-ai-agent-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "types": "src/@types/mateus-ai-agent-sdk.d.ts",
   "scripts": {
