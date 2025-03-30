@@ -11,6 +11,14 @@ Para instalar o SDK, basta rodar o seguinte comando:
 npm install mateus-ai-agent-sdk
 ```
 
+Depois rode o seguinte comando para gerar o seu .env:
+
+```bash
+cp .env.example .env
+```
+
+Após esse passo, cole sua chave da OpenAI no campo indicado
+
 ## Exemplo de uso
 
 Aqui está um exemplo de como você pode usar o SDK para criar e interagir com um agente personalizado:
